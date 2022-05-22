@@ -1,3 +1,3 @@
 class Song < ApplicationRecord
-    belongs_to :Album
+    belongs_to :album
 end
