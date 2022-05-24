@@ -14,6 +14,12 @@ class SongsController < ApplicationController
           render :new
         end
       end
+
+    def show
+        @album = Album.find(params[:album_id])
+        @song = Song.find(params[:id])
+        render :show
+    end
         
     private
         def song_params
