@@ -20,6 +20,12 @@ class SongsController < ApplicationController
         @song = Song.find(params[:id])
         render :show
     end
+
+    def edit
+        @album = Album.find(params[:album_id])
+        @song = Song.find(params[:id])
+        render :edit
+    end
         
     private
         def song_params
