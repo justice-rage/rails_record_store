@@ -1,6 +1,4 @@
-class Album < ApplicationRecord
-    has_and_belongs_to_many(:artists)
-    
+class Album < ApplicationRecord    
     has_many :songs, dependent: :destroy
 
     validates :name, presence: true
